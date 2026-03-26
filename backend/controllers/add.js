@@ -1,5 +1,16 @@
+const fs = require('fs').promises;
+const path = require('path');
+
+
 async function addRepo(){
-    console.log("file added to staging area");
+    const addPath = path.resolve(process.cwd(), ".apnaGit");
+    const staging = path.join(addPath, "staging");
+
+    try{
+        
+    }catch(error){
+        console.error("Error adding file: ", error);
+    }
 }
 
 module.exports = {addRepo};
