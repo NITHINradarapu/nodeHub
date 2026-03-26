@@ -32,7 +32,9 @@ yargs(hideBin(process.argv)) // This starts configuring your CLI tool.
         type: "string",
       });
     },
-    commitRepo
+    (argv) => {
+      commitRepo(argv.message)
+    },
   )
   .command("push", "-> push commits to S3", {}, pushRepo)
   .command("pull", "-> pull commits from S3", {}, pullRepo)
